@@ -1,3 +1,17 @@
+@media (max-width: 620px) {
+	nav {
+		text-align: center;
+	}
+	nav img {
+		display: none;
+	}
+	nav h2 {
+		display: none !important;
+	}
+	nav input {
+		margin-top: 20px;
+	}
+}
 * {
 	font-family: 'Quicksand', sans-serif;
 }

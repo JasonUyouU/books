@@ -10,7 +10,7 @@ function bookSearch() {
 		success: function(data) {
 			for(i = 0; i < data.items.length; i++){
 				var newDiv = document.createElement('div')
-				newDiv.className = "col-md-4 animated fadeInDownBig"
+				newDiv.className = "col-md-4 animated fadeInUpBig"
 				var newH2 = document.createElement('h3')
 				var newP = document.createElement('h5')
 				var newImg = document.createElement('img')
@@ -31,4 +31,10 @@ function bookSearch() {
 		type: 'GET'
 	})
 }
-document.getElementById('button').addEventListener('click', bookSearch, false)
+document.getElementById('button').addEventListener('click', bookSearch, false);
+document.getElementById('search').addEventListener('keydown', function(e) {
+	var value = this.value
+	if (e.code === 'Enter' && value) {
+		bookSearch()
+	}
+});
